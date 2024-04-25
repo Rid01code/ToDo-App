@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import ToDoList from './toDoListRender'
-import { toDoContext } from '../Context/context'
+import { toDoContext } from '../../public/Context/context'
 
 const ToDo = () => {
   const { myToDo } = useContext(toDoContext);
