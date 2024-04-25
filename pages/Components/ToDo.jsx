@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import ToDoList from './toDoListRender'
-import { toDoContext } from '../../public/Context/context'
+import { toDoContext } from '../../Context/context'
 
 const ToDo = () => {
-  const { myToDo } = useContext(toDoContext);
+  const { myToDo=[] } = useContext(toDoContext);
   return (
     <table className='table table-bordered table-hover container mt-5'>
       <thead>

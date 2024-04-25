@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { toDoContext } from '../../public/Context/context';
+import { toDoContext } from '../../Context/context';
 import Input from './Input';
 import ToDo from './ToDo';
 import Message from './Message';

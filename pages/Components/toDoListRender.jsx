@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { toDoContext } from '../../public/Context/context';
+import { toDoContext } from '../../Context/context';
 
 const ToDoList = ({ name, date, index }) => {
   const { deleteItem } = useContext(toDoContext);
