@@ -47,7 +47,7 @@ const Sidebar = () => {
   const [name, setName] = useState('')
 
   useEffect(() => {
-    axios.get(`${window.location.origin}/app/getUserInfo`, { headers })
+    axios.get('localhost://5000/app/getUserInfo', { headers })
       .then(result => setName(result.data.userInfo.name))
   }, [])
   

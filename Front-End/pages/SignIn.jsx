@@ -37,13 +37,13 @@ function SignIn() {
     
       if (name.trim() === '' || email.trim() === '' || phone.trim() === '' || password.trim() === '') {
         alert('Put proper details')
-      } else if (password === reEnteredPassword) {
+      } else if (password !== reEnteredPassword) {
         alert('Password does not match')
         signInPassword.current.value = ''
         signInReEnteredPassword.current.value = ''
       }
       else {
-        await axios.post(`${window.location.origin}/app/signIn`, {
+        await axios.post('localhost://5000/app/signIn', {
           name: name,
           email: email,
           phone: phone,
