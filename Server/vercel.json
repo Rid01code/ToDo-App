@@ -7,6 +7,12 @@
       "config": {}
     }
   ],
+  "rewrites": [
+    {
+      "source" : "/(.*)",
+      "destination" : "/"
+    }
+  ],
   "routes": [
     {
       "src": "/.*",
