@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import ToDoList from './toDoListRender'
 import { toDoContext } from '../../Context/context'
 
@@ -18,7 +18,7 @@ const ToDo = () => {
         </tr>
       </thead>
       <tbody>{myToDo.map((toDo, index) => (
-        <ToDoList key={index} id={toDo._id} index={index} name={toDo.task} date={new Date(toDo.date).toLocaleDateString("en-US", { year: 'numeric', month: '2-digit', day: '2-digit' })} toDo={ toDo} />
+        <ToDoList done={toDo.done} key={index} id={toDo._id} index={index} name={toDo.task} date={new Date(toDo.date).toLocaleDateString("en-US", { year: 'numeric', month: '2-digit', day: '2-digit' })} toDo={toDo} />
       ))}
       </tbody >
     </table>

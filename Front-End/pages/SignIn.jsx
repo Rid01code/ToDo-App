@@ -43,7 +43,7 @@ function SignIn() {
         signInReEnteredPassword.current.value = ''
       }
       else {
-        await axios.post('http://localhost:5000/app/signIn', {
+        await axios.post(`${window.location.origin}/app/signIn`, {
           name: name,
           email: email,
           phone: phone,

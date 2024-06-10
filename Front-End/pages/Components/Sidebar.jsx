@@ -47,15 +47,12 @@ const Sidebar = () => {
   const [name, setName] = useState('')
 
   useEffect(() => {
-    axios.get('http://localhost:5000/app/getUserInfo', { headers })
+    axios.get(`${window.location.origin}/app/getUserInfo`, { headers })
       .then(result => setName(result.data.userInfo.name))
   }, [])
   
   const [activeTab, setActiveTab] = useState('home')
   
-  const activeTheNav = () => {
-  }
-
   return (
     <div className={styles.sidebar}>
       <a href="/" className="d-flex align-items-center justify-content-center link-dark text-decoration-none mb-3" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">

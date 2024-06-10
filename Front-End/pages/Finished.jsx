@@ -20,7 +20,7 @@ const Finished = () => {
   
   useEffect(() => {
     try {
-      axios.get('http://localhost:5000/app/task/getFinish', { headers })
+      axios.get(`${window.location.origin}/app/task/getFinish`, { headers })
         .then(result => {
           setFinishedTask(result.data.data.tasks)
           console.log(result.data.data.tasks)
