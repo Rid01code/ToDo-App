@@ -43,7 +43,7 @@ function SignIn() {
         signInReEnteredPassword.current.value = ''
       }
       else {
-        await axios.post('localhost://5000/app/signIn', {
+        await axios.post('http://localhost:5000/app/signIn', {
           name: name,
           email: email,
           phone: phone,
@@ -59,7 +59,7 @@ function SignIn() {
         signInReEnteredPassword.current.value = ''
       }
     } catch (error) {
-      alert(error.response.data.message)
+      alert('error.response.data.message')
     }
   };
   return (

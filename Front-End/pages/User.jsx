@@ -22,7 +22,7 @@ const User = () => {
 
   useEffect(() => {
     try {
-      axios.get('localhost://5000/app/getUserInfo', { headers })
+      axios.get('http://localhost:5000/app/getUserInfo', { headers })
         .then(result => {
           setName(result.data.userInfo.name)
           setEmail(result.data.userInfo.email)

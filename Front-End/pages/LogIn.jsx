@@ -35,7 +35,7 @@ const LogIn = () => {
       if (email.trim() === '' || password.trim === '') {
         alert('Put proper details')
       } else {
-        const response = await axios.post('localhost://5000/app/logIn', {
+        const response = await axios.post('http://localhost:5000/app/logIn', {
           email: email,
           password: password
         })

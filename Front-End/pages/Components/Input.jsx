@@ -45,7 +45,7 @@ const Input = () => {
           setTodoDateValue("");
         } else {
           // getNewItem(textValue.toUpperCase(), dateValue);
-          await axios.post('localhost://5000/app/task/add', { task: textValue.toUpperCase(), date: dateValue }, { headers })
+          await axios.post('http://localhost:5000/app/task/add', { task: textValue.toUpperCase(), date: dateValue }, { headers })
             .then(response => {
               setMyToDo([...myToDo, response.data]);
             })

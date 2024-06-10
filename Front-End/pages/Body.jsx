@@ -44,7 +44,7 @@ const Body = () => {
     const fetch = async () => {
       try {
         const response = await axios.get(
-          'localhost://5000/app/task/get', { headers }
+          'http://localhost:5000/app/task/get', { headers }
         )
         setMyToDo(response.data.data.tasks)
       } catch (error) {
@@ -58,7 +58,7 @@ const Body = () => {
   let deleteItem = async (id) => {
     try {
       event.preventDefault()
-      const response = await axios.delete(`localhost://5000/app/task/delete/${id}`, { headers })
+      const response = await axios.delete(`http://localhost:5000/app/task/delete/${id}`, { headers })
       alert(response.data.message)
     } catch (error) {
       alert(error.response.data.message)
@@ -69,7 +69,7 @@ const Body = () => {
   let finishItem = async (id) => {
     try {
       event.preventDefault()
-      const response = await axios.put(`localhost://5000/app/task/finish/${id}`, {}, { headers })
+      const response = await axios.put(`http://localhost:5000/app/task/finish/${id}`, {}, { headers })
       alert(response.data.message)
     } catch (error) {
       alert(error.response.data.message)
