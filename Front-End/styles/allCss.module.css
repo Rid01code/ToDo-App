@@ -1,0 +1,36 @@
+/* Add this to your CSS file */
+
+.sidebar {
+  position: relative;
+  width: 185px; /* adjust the width to your liking */
+  transition: width 0.3s ease-in-out;
+  margin-top: -35px;
+}
+.logInBox{
+  width: 500px;
+  padding: 15px 10px;
+}
+.signInBox{
+  width: 500px;
+  padding: 15px 10px;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px
+  }
+  .logInBox{
+    width:300px;
+    padding: 5px 4px;
+  }
+  .signInBox{
+  width: 500px;
+  padding: 5px 4px;
+}
+} 
+
+/* Add this to your JavaScript code to toggle the nav
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.querySelector('.nav').classList.toggle('active');
+}); */
