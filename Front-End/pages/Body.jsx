@@ -68,8 +68,8 @@ const Body = () => {
 
   let finishItem = async (id) => {
     try {
-      event.preventDefault()
-      const response = await axios.put(`https://to-do-api-seven.vercel.app/task/finish/${id}`, {}, { headers })
+      // event.preventDefault()
+      const response = await axios.put(`https://to-do-api-seven.vercel.app/app/task/finish/${id}`, {}, { headers })
       alert(response.data.message)
     } catch (error) {
       alert(error.response.data.message)
