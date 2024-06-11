@@ -7,10 +7,8 @@ import { authActions } from '@/Store/Auth';
 import axios from 'axios';
 import { useStore, useSelector } from 'react-redux';
 import styles from '../styles/allCss.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
-import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
 const LogIn = () => {
 
@@ -82,7 +80,7 @@ const LogIn = () => {
             ref={logInPassWord}
           />
           <span onClick={handleShowPassword}>
-            {showPassword ? <FontAwesomeIcon icon={faEye} /> : <FontAwesomeIcon icon={faEyeSlash} />}
+            {showPassword ? <FaEye /> : <FaEyeSlash />}
           </span>
         </Form.Group>
         <div className='d-flex justify-content-between'>

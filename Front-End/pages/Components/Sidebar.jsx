@@ -1,12 +1,11 @@
 import React, { useEffect , useState } from 'react';
 import logo from '../../Assets/logo.png'
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
-import { faListCheck } from '@fortawesome/free-solid-svg-icons';
-import { faList } from '@fortawesome/free-solid-svg-icons';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { FaHouse } from "react-icons/fa6";
+import { CiCircleList } from "react-icons/ci";
+import { FaListCheck } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa";
+import { FaRightFromBracket } from "react-icons/fa6";
 import { authActions } from '@/Store/Auth';
 import {useStore} from 'react-redux'
 import axios from 'axios';
@@ -63,22 +62,22 @@ const Sidebar = () => {
         <ul className="nav nav-pills nav-flush flex-column mb-auto text-center">
           <li className="nav-item">
             <a href="/" className={`nav-link py-3 border-bottom ${activeTab === 'home' ? 'active' : ''}`} aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home" onClick={() => setActiveTab('home')}>
-              <FontAwesomeIcon icon={faHouse} size='xl' />
+              <FaHouse size={30} />
             </a>
           </li>
           <li>
             <a href="/" className={`nav-link py-3 border-bottom ${activeTab === 'orders' ? 'active' : ''}`} title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders" onClick={() => setActiveTab('orders')}>
-              <FontAwesomeIcon icon={faList} size='xl' />
+              <CiCircleList size={30}/>
             </a>
           </li>
           <li>
             <a href="/Finished" className={`nav-link py-3 border-bottom ${activeTab === 'products' ? 'active' : ''}`} title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products" onClick={() => setActiveTab('products')}>
-              <FontAwesomeIcon icon={faListCheck} size='xl' />
+              <FaListCheck size={30}/>
             </a>
           </li>
           <li>
             <a href="/User" className={`nav-link py-3 border-bottom d-flex align-items-center justify-content-evenly ${activeTab === 'customers' ? 'active' : ''}`} title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers" onClick={() => setActiveTab('customers')}>
-              <FontAwesomeIcon icon={faUser} size='xl' />
+              <FaUser size={25}/>
               <details>
                 <summary> </summary>
                 <p>{name}</p>
@@ -87,8 +86,8 @@ const Sidebar = () => {
           </li>
           <li>
             <a href="/LogIn" className="nav-link py-3 border-bottom" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
-              <FontAwesomeIcon icon={faRightFromBracket} size='xl'
-                onClick={logOut} />
+              <FaRightFromBracket 
+              onClick={logOut} size={25}/>
             </a>
           </li>
         </ul>
