@@ -67,7 +67,7 @@ const Sidebar = () => {
     <div className={styles.sidebar}>
 
       <a href="/" className="d-flex align-items-center justify-content-center link-dark text-decoration-none mb-3" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
-        <Image width='30' height='30.5' src={logo} alt='' />
+        <Image width='25' height='27' src={logo} alt='' />
         <span className="visually-hidden">Icon-only</span>
       </a>
 
@@ -77,7 +77,7 @@ const Sidebar = () => {
 
         <ul className="nav nav-pills nav-flush flex-column mb-auto text-center">
 
-          <ImCross size={20} onClick={toggleSidebarClose} className={`${styles.crossButton}`} />
+          <ImCross size={20}  onClick={toggleSidebarClose} className={`${styles.crossButton}`} />
 
           <li className="nav-item">
             <a href="/" className={`nav-link py-3 border-bottom ${activeTab === 'home' ? 'active' : ''}`} aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home" onClick={() => setActiveTab('home')}>
