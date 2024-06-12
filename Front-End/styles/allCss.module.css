@@ -23,7 +23,9 @@
 .barsButton{
   display: none;
 }
-
+.crossButton{
+  display: none;
+}
 /* Media query for small screens */
 @media (max-width: 768px) {
   .sidebar {
@@ -51,5 +53,8 @@
 }
 .barsButtonClose{
   display: none;
+}
+.crossButton{
+  display: block;
 }
 } 

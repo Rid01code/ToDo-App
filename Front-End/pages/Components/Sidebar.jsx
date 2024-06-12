@@ -77,7 +77,7 @@ const Sidebar = () => {
 
         <ul className="nav nav-pills nav-flush flex-column mb-auto text-center">
 
-          <ImCross size={20} onClick={toggleSidebarClose} />
+          <ImCross size={20} onClick={toggleSidebarClose} className={`${styles.crossButton}`} />
 
           <li className="nav-item">
             <a href="/" className={`nav-link py-3 border-bottom ${activeTab === 'home' ? 'active' : ''}`} aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home" onClick={() => setActiveTab('home')}>
