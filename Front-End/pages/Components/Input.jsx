@@ -44,7 +44,6 @@ const Input = () => {
           setTodoTextValue("");
           setTodoDateValue("");
         } else {
-          // getNewItem(textValue.toUpperCase(), dateValue);
           await axios.post('https://to-do-api-seven.vercel.app/app/task/add', { task: textValue.toUpperCase(), date: dateValue }, { headers })
             .then(response => {
               setMyToDo([...myToDo, response.data]);

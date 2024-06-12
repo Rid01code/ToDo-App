@@ -4,7 +4,10 @@
   position: relative;
   width: 155px; /* adjust the width to your liking */
   transition: width 0.3s ease-in-out;
-  margin-top: -35px;
+  margin-top: -34px;
+}
+.responsiveSidebar{
+  position: relative;
 }
 .logInBox{
   width: 500px;
@@ -14,23 +17,39 @@
   width: 500px;
   padding: 15px 10px;
 }
+.button{
+  max-width: 60px;
+}
+.barsButton{
+  display: none;
+}
 
 /* Media query for small screens */
 @media (max-width: 768px) {
   .sidebar {
     width: 68px
   }
+  .responsiveSidebar{
+  position: absolute;;
+  left: -100px;
+}
+  .responsiveSidebarActive{
+    position: absolute;
+    left: 0px;
+    width: 68px;
+  }
   .logInBox{
-    width:300px;
+    width:350px;
     padding: 5px 4px;
   }
   .signInBox{
-  width: 500px;
+  width: 350px;
   padding: 5px 4px;
 }
+.barsButton{
+  display: block;
+}
+.barsButtonClose{
+  display: none;
+}
 } 
-
-/* Add this to your JavaScript code to toggle the nav
-document.getElementById('hamburger').addEventListener('click', () => {
-  document.querySelector('.nav').classList.toggle('active');
-}); */

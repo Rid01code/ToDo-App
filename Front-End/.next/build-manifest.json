@@ -17,16 +17,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
-    "/Finished": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Finished.js"
-    ],
-    "/User": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/User.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
